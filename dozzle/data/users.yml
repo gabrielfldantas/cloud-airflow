@@ -1,0 +1,6 @@
+users:
+    admin:
+        email: test@email.net
+        name: John Doe
+        password: $2a$11$PnuW1bSk82dBzUfa/aArnOrFg/uFdmeX3cpjaoEvDOiYSdqaCw1rO
+        filter: ""

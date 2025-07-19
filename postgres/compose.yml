@@ -1,0 +1,26 @@
+services:
+  postgres-data:
+    image: postgres:16.9
+    container_name: postgres-data
+    restart: always
+    environment:
+      POSTGRES_USER: ${PG_DATA_USER}
+      POSTGRES_PASSWORD: ${PG_DATA_PASSWORD}
+      POSTGRES_DB: ${PG_DATA_DB}
+    ports:
+      - 5432:5432
+    volumes:
+      - ./pg-data/postgres:/var/lib/postgresql/data
+
+  postgres-airflow:
+    image: postgres:16.9
+    container_name: postgres-airflow
+    restart: always
+    environment:
+      POSTGRES_USER: ${PG_AIRFLOW_USER}
+      POSTGRES_PASSWORD: ${PG_AIRFLOW_PASSWORD}
+      POSTGRES_DB: ${PG_AIRFLOW_DB}
+    ports:
+      - 5433:5432
+    volumes:
+      - ./pg-airflow/postgres:/var/lib/postgresql/data
