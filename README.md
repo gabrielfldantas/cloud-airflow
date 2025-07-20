@@ -18,7 +18,7 @@ Next step: Implement Kubernetes.
 
 ### Airflow .env:
 ```sh
-AIRFLOW_UID = 
+AIRFLOW_UID = 50000
 _AIRFLOW_WWW_USER_USERNAME = 
 _AIRFLOW_WWW_USER_PASSWORD = 
 DB_HOST = 
